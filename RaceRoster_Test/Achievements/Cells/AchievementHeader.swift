@@ -33,9 +33,10 @@ class AchievementHeader: UICollectionReusableView {
     
     // MARK:- Helpers
     private func configureLayout() {
+        backgroundColor = UIColor.CustomColors.grayColor
         addSubview(headerLabel)
         headerLabel.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 10).isActive = true
-        headerLabel.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+        headerLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
         headerLabel.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
     }
     

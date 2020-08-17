@@ -62,19 +62,19 @@ private extension AchievementsViewController {
         item.contentInsets = NSDirectionalEdgeInsets(top: 2, leading: 2, bottom: 2, trailing: 2)
         
         let groupSize: NSCollectionLayoutSize = .init(widthDimension: .fractionalWidth(1),
-                                                      heightDimension: .absolute(180))
+                                                      heightDimension: .absolute(240))
         let group = NSCollectionLayoutGroup.horizontal(
             layoutSize: groupSize,
             subitem: item,
             count: 2)
         
         let headerSize: NSCollectionLayoutSize = .init(widthDimension: .fractionalWidth(1.0),
-                                                       heightDimension: .absolute(44))
+                                                       heightDimension: .absolute(40))
         let sectionHeader = NSCollectionLayoutBoundarySupplementaryItem(
             layoutSize: headerSize,
             elementKind: AchievementHeader.headerId,
             alignment: .top)
-        //sectionHeader.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 5, trailing: 0)
+        sectionHeader.pinToVisibleBounds = true
         
         let section = NSCollectionLayoutSection(group: group)
         section.boundarySupplementaryItems = [sectionHeader]
@@ -102,6 +102,8 @@ private extension AchievementsViewController {
     func createDataSource() -> DataSource {
         let dataSource = DataSource(collectionView: collectionView) { (collectionView, indexPath, achievement) -> UICollectionViewCell? in
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AchievementCell.cellId, for: indexPath) as? AchievementCell
+            let achievement = self.dataSource.itemIdentifier(for: indexPath)
+            cell?.configureCell(with: achievement)
             return cell
         }
         

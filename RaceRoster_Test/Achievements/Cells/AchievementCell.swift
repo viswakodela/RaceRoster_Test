@@ -13,6 +13,43 @@ class AchievementCell: UICollectionViewCell {
     // MARK:- Properties
     static let cellId       = String(describing: type(of: self))
     
+    // MARK:- Layout Objects
+    let achievementLogoImageView: UIImageView = {
+        let iv = UIImageView(image: UIImage(named: "work"))
+        iv.translatesAutoresizingMaskIntoConstraints = false
+        iv.contentMode = .scaleAspectFit
+        iv.clipsToBounds = true
+        return iv
+    }()
+    
+    let achievementNameLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = UIFont.CustomFonts.semiBold22
+        label.textAlignment = .center
+        return label
+    }()
+    
+    let achievementDurationLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = UIFont.CustomFonts.regular18
+        label.textAlignment = .center
+        return label
+    }()
+    
+    lazy var overallStackView: UIStackView = {
+        let sv = UIStackView(arrangedSubviews: [achievementLogoImageView,
+                                                achievementNameLabel,
+                                                achievementDurationLabel,
+                                                UIView(),])
+        sv.translatesAutoresizingMaskIntoConstraints = false
+        sv.spacing = 4
+        sv.axis = .vertical
+        achievementLogoImageView.heightAnchor.constraint(equalTo: sv.heightAnchor, multiplier: 0.6).isActive = true
+        return sv
+    }()
+    
     // MARK:- init
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -25,7 +62,18 @@ class AchievementCell: UICollectionViewCell {
     
     // MARK:- Helpers
     private func configureLayout() {
-        backgroundColor = .black
+        addSubview(overallStackView)
+        NSLayoutConstraint.activate([
+            overallStackView.topAnchor.constraint(equalTo: topAnchor),
+            overallStackView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            overallStackView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            overallStackView.bottomAnchor.constraint(equalTo: bottomAnchor),
+        ])
+    }
+    
+    func configureCell(with achievement: Achievement?) {
+        achievementNameLabel.text = achievement?.name
+        achievementDurationLabel.text = achievement?.distance
     }
     
 }

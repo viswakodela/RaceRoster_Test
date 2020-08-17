@@ -13,15 +13,14 @@ class Achievement {
     
     // MARK:- Properties
     let name: String
-    let image: String
+    let image: String = "\(Int.getRandomNum)"
     let distance: String
     let isAchieved: Bool
     let id = UUID()
     
     // MARK:- init
-    init(name: String, image: String, distance: String, isAchieved: Bool = true) {
+    init(name: String, distance: String, isAchieved: Bool = true) {
         self.name = name
-        self.image = image
         self.distance = distance
         self.isAchieved = isAchieved
     }

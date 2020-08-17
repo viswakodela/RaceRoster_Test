@@ -8,6 +8,8 @@
 
 import UIKit
 
+/// Use this Operation class to mock the API Network operations.
+/// Note: - We need to be careful when modifying this class, we have to make sure we are setting the `state` to `isFinished`, otherwise the completionBlock for this operation won't get called.
 class AchievementsAsyncOperation: AsyncOperation {
     
     // MARK:- Properties
@@ -33,6 +35,7 @@ class AchievementsAsyncOperation: AsyncOperation {
     
     private func fetchAchievements() {
         achievementsQueue.async {
+            // mocking the UI by asking the system to sleep for 2 secons
             sleep(2)
             let personalAchievements = [Achievement(name: "Longest Run", image: "\(Int.getRandomNum)", distance: "00:00"),
                                         Achievement(name: "Highest Elevation", image: "\(Int.getRandomNum)", distance: "2095 ft"),

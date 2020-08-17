@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// Object represents the Item for a Section
 class Achievement {
     
     // MARK:- Properties

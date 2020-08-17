@@ -102,7 +102,7 @@ private extension AchievementsViewController {
             guard let self = self else { return }
             self.achievementSections = operation.achievementSections
         }
-        let queue = AppDelegate.giveMeNewOperation(withName: "com.raceroster.achievements.oq")
+        let queue = AppDelegate.createNewOperation(withName: "com.raceroster.achievements.oq")
         operation.completionBlock = {
             DispatchQueue.main.async {
                 self.loadingSpinner.remove()

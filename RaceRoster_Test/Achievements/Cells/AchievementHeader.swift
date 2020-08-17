@@ -13,6 +13,14 @@ class AchievementHeader: UICollectionReusableView {
     // MARK:- Properties
     static let headerId         = String(describing: type(of: self))
     
+    // MARK:- Layout Objects
+    let headerLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = UIFont.CustomFonts.semiBold18
+        return label
+    }()
+    
     // MARK:- init
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -25,7 +33,10 @@ class AchievementHeader: UICollectionReusableView {
     
     // MARK:- Helpers
     private func configureLayout() {
-        backgroundColor = .red
+        addSubview(headerLabel)
+        headerLabel.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 10).isActive = true
+        headerLabel.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+        headerLabel.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
     }
     
 }

@@ -18,14 +18,14 @@ class LoadingViewController: UIViewController {
         av.translatesAutoresizingMaskIntoConstraints = false
         av.hidesWhenStopped = true
         av.startAnimating()
-        av.color = UIColor(light: UIColor.EBOXColors.grayColor, dark: UIColor(white: 1, alpha: 0.7))
+        av.color = UIColor(light: UIColor.CustomColors.grayColor, dark: UIColor(white: 1, alpha: 0.7))
         return av
     }()
     
     let loadingLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = UIFont.EBOXFonts.loadingSpinnerFont10
+        label.font = UIFont.CustomFonts.loadingSpinnerFont10
         label.text = "LOADING"
         label.textAlignment = .center
         label.textColor = UIColor(light: .black, dark: .white)

@@ -23,7 +23,7 @@ extension UIColor {
         self.init(red: red, green: green, blue: blue, alpha: alpha)
     }
     
-    struct EBOXColors {
+    struct CustomColors {
         static let grayColor                        = UIColor(white: 0, alpha: 0.5)
         static let customLoadingBGColor             = UIColor(white: 0, alpha: 0.7)
     }

@@ -21,6 +21,7 @@ class AchievementsViewController: UIViewController {
         cv.translatesAutoresizingMaskIntoConstraints = false
         cv.backgroundColor = .systemBackground
         cv.alwaysBounceVertical = true
+        cv.showsVerticalScrollIndicator = false
         cv.register(AchievementCell.self, forCellWithReuseIdentifier: AchievementCell.cellId)
         cv.register(AchievementHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: AchievementHeader.headerId)
         return cv
@@ -40,6 +41,7 @@ class AchievementsViewController: UIViewController {
 // MARK:- Helpers
 private extension AchievementsViewController {
     func configureView() {
+        navigationItem.title = "Achievements"
         view.backgroundColor = .systemBackground
         
         view.addSubview(collectionView)
@@ -108,6 +110,7 @@ private extension AchievementsViewController {
             kind: String,
             indexPath: IndexPath) -> UICollectionReusableView? in
             let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: AchievementHeader.headerId, for: indexPath) as! AchievementHeader
+            header.headerLabel.text = self.achievementSections[indexPath.section].name
             return header
         }
         

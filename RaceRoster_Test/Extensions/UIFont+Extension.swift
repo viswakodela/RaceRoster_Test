@@ -9,7 +9,7 @@
 import UIKit
 
 extension UIFont {
-    struct EBOXFonts {
+    struct CustomFonts {
         static let homeSectionHeaderAvnirHeavyFont16        = UIFont(name: "Avenir-Heavy", size: 16)
         static let loadingSpinnerFont10                     = UIFont.systemFont(ofSize: 10, weight: .medium)
         static let yearLabelFont15                          = UIFont.monospacedDigitSystemFont(ofSize: 15, weight: .medium)
@@ -24,6 +24,15 @@ extension UIFont {
         static let regular24                                = UIFont.systemFont(ofSize: 24, weight: .regular)
         static let regular25                                = UIFont.systemFont(ofSize: 25, weight: .regular)
         static let regular30                                = UIFont.systemFont(ofSize: 30, weight: .regular)
+        
+        static let semiBold15                               = UIFont.systemFont(ofSize: 15, weight: .semibold)
+        static let semiBold18                               = UIFont.systemFont(ofSize: 18, weight: .semibold)
+        static let semiBold20                               = UIFont.systemFont(ofSize: 20, weight: .semibold)
+        static let semiBold22                               = UIFont.systemFont(ofSize: 22, weight: .semibold)
+        static let semiBold24                               = UIFont.systemFont(ofSize: 24, weight: .semibold)
+        static let semiBold25                               = UIFont.systemFont(ofSize: 25, weight: .semibold)
+        static let semiBild30                               = UIFont.systemFont(ofSize: 30, weight: .semibold)
+        static let semiBold35                               = UIFont.systemFont(ofSize: 35, weight: .semibold)
     }
 }
 

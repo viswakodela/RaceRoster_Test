@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		BDF72B5824EB05BB00250360 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF72B5724EB05BB00250360 /* AppDelegate.swift */; };
 		BDF72B5A24EB05BB00250360 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF72B5924EB05BB00250360 /* SceneDelegate.swift */; };
-		BDF72B5C24EB05BB00250360 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF72B5B24EB05BB00250360 /* ViewController.swift */; };
+		BDF72B5C24EB05BB00250360 /* AchievementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF72B5B24EB05BB00250360 /* AchievementsViewController.swift */; };
 		BDF72B5F24EB05BB00250360 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDF72B5D24EB05BB00250360 /* Main.storyboard */; };
 		BDF72B6124EB05BC00250360 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDF72B6024EB05BC00250360 /* Assets.xcassets */; };
 		BDF72B6424EB05BC00250360 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDF72B6224EB05BC00250360 /* LaunchScreen.storyboard */; };
+		BDF72B7124EB07B300250360 /* AchievementType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF72B7024EB07B300250360 /* AchievementType.swift */; };
+		BDF72B7324EB08BE00250360 /* Achievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF72B7224EB08BE00250360 /* Achievement.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BDF72B5424EB05BB00250360 /* RaceRoster_Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RaceRoster_Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDF72B5724EB05BB00250360 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDF72B5924EB05BB00250360 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BDF72B5B24EB05BB00250360 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BDF72B5B24EB05BB00250360 /* AchievementsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsViewController.swift; sourceTree = "<group>"; };
 		BDF72B5E24EB05BB00250360 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BDF72B6024EB05BC00250360 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BDF72B6324EB05BC00250360 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BDF72B6524EB05BC00250360 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BDF72B7024EB07B300250360 /* AchievementType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementType.swift; sourceTree = "<group>"; };
+		BDF72B7224EB08BE00250360 /* Achievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Achievement.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,49 @@
 		BDF72B5624EB05BB00250360 /* RaceRoster_Test */ = {
 			isa = PBXGroup;
 			children = (
-				BDF72B5724EB05BB00250360 /* AppDelegate.swift */,
-				BDF72B5924EB05BB00250360 /* SceneDelegate.swift */,
-				BDF72B5B24EB05BB00250360 /* ViewController.swift */,
+				BDF72B6B24EB074D00250360 /* Core */,
+				BDF72B6E24EB077000250360 /* Achievements */,
 				BDF72B5D24EB05BB00250360 /* Main.storyboard */,
 				BDF72B6024EB05BC00250360 /* Assets.xcassets */,
 				BDF72B6224EB05BC00250360 /* LaunchScreen.storyboard */,
 				BDF72B6524EB05BC00250360 /* Info.plist */,
 			);
 			path = RaceRoster_Test;
+			sourceTree = "<group>";
+		};
+		BDF72B6B24EB074D00250360 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				BDF72B5724EB05BB00250360 /* AppDelegate.swift */,
+				BDF72B5924EB05BB00250360 /* SceneDelegate.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		BDF72B6C24EB075800250360 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BDF72B5B24EB05BB00250360 /* AchievementsViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BDF72B6E24EB077000250360 /* Achievements */ = {
+			isa = PBXGroup;
+			children = (
+				BDF72B6F24EB077B00250360 /* Model */,
+				BDF72B6C24EB075800250360 /* Controller */,
+			);
+			path = Achievements;
+			sourceTree = "<group>";
+		};
+		BDF72B6F24EB077B00250360 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BDF72B7024EB07B300250360 /* AchievementType.swift */,
+				BDF72B7224EB08BE00250360 /* Achievement.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +176,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDF72B5C24EB05BB00250360 /* ViewController.swift in Sources */,
+				BDF72B5C24EB05BB00250360 /* AchievementsViewController.swift in Sources */,
 				BDF72B5824EB05BB00250360 /* AppDelegate.swift in Sources */,
 				BDF72B5A24EB05BB00250360 /* SceneDelegate.swift in Sources */,
+				BDF72B7124EB07B300250360 /* AchievementType.swift in Sources */,
+				BDF72B7324EB08BE00250360 /* Achievement.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

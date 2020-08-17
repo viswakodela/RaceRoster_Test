@@ -11,6 +11,7 @@ import Foundation
 class AchievementType {
     
     // MARK:- Properties
+    let id = UUID()
     let name: String
     let achievements: [Achievement]
     
@@ -19,5 +20,15 @@ class AchievementType {
     init(name: String, achievements: [Achievement]) {
         self.name = name
         self.achievements = achievements
+    }
+}
+
+extension AchievementType: Hashable {
+    static func == (lhs: AchievementType, rhs: AchievementType) -> Bool {
+        lhs.id == rhs.id
+    }
+    
+    func hash(into hasher: inout Hasher) {
+      hasher.combine(id)
     }
 }

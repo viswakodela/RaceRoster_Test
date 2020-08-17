@@ -12,11 +12,26 @@ class Achievement {
     
     // MARK:- Properties
     let name: String
-    let image: UIImage
+    let image: UIImage?
+    let distance: String
+    let isAchieved: Bool
+    let id = UUID()
     
     // MARK:- init
-    init(name: String, image: UIImage) {
+    init(name: String, image: UIImage?, distance: String, isAchieved: Bool = true) {
         self.name = name
         self.image = image
+        self.distance = distance
+        self.isAchieved = isAchieved
+    }
+}
+
+extension Achievement: Hashable {
+    static func == (lhs: Achievement, rhs: Achievement) -> Bool {
+        lhs.id == rhs.id
+    }
+    
+    func hash(into hasher: inout Hasher) {
+      hasher.combine(id)
     }
 }

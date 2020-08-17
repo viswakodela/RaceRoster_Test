@@ -35,3 +35,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+extension AppDelegate {
+    static func giveMeNewOperation(withName name: String) -> OperationQueue {
+        let operationQueue = OperationQueue()
+        operationQueue.name = name
+        return operationQueue
+    }
+}
+

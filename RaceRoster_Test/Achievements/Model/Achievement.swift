@@ -19,5 +19,4 @@ class Achievement {
         self.name = name
         self.image = image
     }
-    
 }

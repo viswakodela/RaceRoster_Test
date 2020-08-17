@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD809EB124EB0D9D0024A964 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD809EB024EB0D9D0024A964 /* LoadingViewController.swift */; };
+		BD809EB524EB0DDA0024A964 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD809EB424EB0DDA0024A964 /* UIColor+Extension.swift */; };
+		BD809EB724EB0E440024A964 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD809EB624EB0E440024A964 /* UIFont+Extension.swift */; };
+		BD809EB924EB0ECF0024A964 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD809EB824EB0ECF0024A964 /* UIViewController+Extension.swift */; };
 		BDF72B5824EB05BB00250360 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF72B5724EB05BB00250360 /* AppDelegate.swift */; };
 		BDF72B5A24EB05BB00250360 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF72B5924EB05BB00250360 /* SceneDelegate.swift */; };
 		BDF72B5C24EB05BB00250360 /* AchievementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF72B5B24EB05BB00250360 /* AchievementsViewController.swift */; };
@@ -15,9 +19,15 @@
 		BDF72B6424EB05BC00250360 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDF72B6224EB05BC00250360 /* LaunchScreen.storyboard */; };
 		BDF72B7124EB07B300250360 /* AchievementType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF72B7024EB07B300250360 /* AchievementType.swift */; };
 		BDF72B7324EB08BE00250360 /* Achievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF72B7224EB08BE00250360 /* Achievement.swift */; };
+		BDF72B7724EB0A4700250360 /* AsyncOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF72B7624EB0A4700250360 /* AsyncOperation.swift */; };
+		BDF72B7924EB0A7100250360 /* AchievementsAsyncOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF72B7824EB0A7100250360 /* AchievementsAsyncOperation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BD809EB024EB0D9D0024A964 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		BD809EB424EB0DDA0024A964 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		BD809EB624EB0E440024A964 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
+		BD809EB824EB0ECF0024A964 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		BDF72B5424EB05BB00250360 /* RaceRoster_Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RaceRoster_Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDF72B5724EB05BB00250360 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDF72B5924EB05BB00250360 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -28,6 +38,8 @@
 		BDF72B6524EB05BC00250360 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BDF72B7024EB07B300250360 /* AchievementType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementType.swift; sourceTree = "<group>"; };
 		BDF72B7224EB08BE00250360 /* Achievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Achievement.swift; sourceTree = "<group>"; };
+		BDF72B7624EB0A4700250360 /* AsyncOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncOperation.swift; sourceTree = "<group>"; };
+		BDF72B7824EB0A7100250360 /* AchievementsAsyncOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsAsyncOperation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +53,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BD809EAF24EB0D850024A964 /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				BD809EB024EB0D9D0024A964 /* LoadingViewController.swift */,
+			);
+			path = "Custom Views";
+			sourceTree = "<group>";
+		};
+		BD809EB324EB0DC90024A964 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BD809EB424EB0DDA0024A964 /* UIColor+Extension.swift */,
+				BD809EB624EB0E440024A964 /* UIFont+Extension.swift */,
+				BD809EB824EB0ECF0024A964 /* UIViewController+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		BDF72B4B24EB05BB00250360 = {
 			isa = PBXGroup;
 			children = (
@@ -62,6 +92,9 @@
 			children = (
 				BDF72B6B24EB074D00250360 /* Core */,
 				BDF72B6E24EB077000250360 /* Achievements */,
+				BDF72B7524EB0A3600250360 /* Operation */,
+				BD809EAF24EB0D850024A964 /* Custom Views */,
+				BD809EB324EB0DC90024A964 /* Extensions */,
 				BDF72B5D24EB05BB00250360 /* Main.storyboard */,
 				BDF72B6024EB05BC00250360 /* Assets.xcassets */,
 				BDF72B6224EB05BC00250360 /* LaunchScreen.storyboard */,
@@ -103,6 +136,15 @@
 				BDF72B7224EB08BE00250360 /* Achievement.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		BDF72B7524EB0A3600250360 /* Operation */ = {
+			isa = PBXGroup;
+			children = (
+				BDF72B7624EB0A4700250360 /* AsyncOperation.swift */,
+				BDF72B7824EB0A7100250360 /* AchievementsAsyncOperation.swift */,
+			);
+			path = Operation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,9 +219,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDF72B5C24EB05BB00250360 /* AchievementsViewController.swift in Sources */,
+				BD809EB924EB0ECF0024A964 /* UIViewController+Extension.swift in Sources */,
 				BDF72B5824EB05BB00250360 /* AppDelegate.swift in Sources */,
 				BDF72B5A24EB05BB00250360 /* SceneDelegate.swift in Sources */,
+				BD809EB524EB0DDA0024A964 /* UIColor+Extension.swift in Sources */,
+				BD809EB124EB0D9D0024A964 /* LoadingViewController.swift in Sources */,
 				BDF72B7124EB07B300250360 /* AchievementType.swift in Sources */,
+				BDF72B7724EB0A4700250360 /* AsyncOperation.swift in Sources */,
+				BDF72B7924EB0A7100250360 /* AchievementsAsyncOperation.swift in Sources */,
+				BD809EB724EB0E440024A964 /* UIFont+Extension.swift in Sources */,
 				BDF72B7324EB08BE00250360 /* Achievement.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

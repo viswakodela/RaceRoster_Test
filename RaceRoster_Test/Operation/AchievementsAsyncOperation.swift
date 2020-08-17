@@ -34,22 +34,22 @@ class AchievementsAsyncOperation: AsyncOperation {
     private func fetchAchievements() {
         achievementsQueue.async {
             sleep(2)
-            let personalAchievements = [Achievement(name: "Longest Run", image: nil, distance: "00:00"),
-                                        Achievement(name: "Highest Elevation", image: nil, distance: "2095 ft"),
-                                        Achievement(name: "Fastest 5K", image: nil, distance: "00:00"),
-                                        Achievement(name: "10K", image: nil, distance: "00:00:00"),
-                                        Achievement(name: "Half Marathon", image: nil, distance: "00:00"),
-                                        Achievement(name: "Marathon", image: nil, distance: "Not Yet", isAchieved: false),]
+            let personalAchievements = [Achievement(name: "Longest Run", image: "electric-bike", distance: "00:00"),
+                                        Achievement(name: "Highest Elevation", image: "internet-of-things-2", distance: "2095 ft"),
+                                        Achievement(name: "Fastest 5K", image: "internet-of-things", distance: "00:00"),
+                                        Achievement(name: "10K", image: "move-sensor", distance: "00:00:00"),
+                                        Achievement(name: "Half Marathon", image: "smart-home", distance: "00:00"),
+                                        Achievement(name: "Marathon", image: "smart-car", distance: "Not Yet", isAchieved: false),]
             
             let personalSection = AchievementType(name: "Personal Record", achievements: personalAchievements)
             self.achievementSections.append(personalSection)
             
-            let virutalAchievements = [Achievement(name: "Virtual Half Marathon Race", image: nil, distance: "00:00"),
-                                       Achievement(name: "Tokyo-Hakone Ekiden 2020", image: nil, distance: "00:00:00"),
-                                       Achievement(name: "Virtual 10K Race", image: nil, distance: "00:00:000"),
-                                       Achievement(name: "Hakone Ekiden", image: nil, distance: "00:00:00"),
-                                       Achievement(name: "Mizuno Singapore Ekiden 2015", image: nil, distance: "00:00:00"),
-                                       Achievement(name: "Virtual 5K Race", image: nil, distance: "23:07"),]
+            let virutalAchievements = [Achievement(name: "Virtual Half Marathon Race", image: "smart-tv", distance: "00:00"),
+                                       Achievement(name: "Tokyo-Hakone Ekiden 2020", image: "work", distance: "00:00:00"),
+                                       Achievement(name: "Virtual 10K Race", image: "", distance: "00:00:000"),
+                                       Achievement(name: "Hakone Ekiden", image: "", distance: "00:00:00"),
+                                       Achievement(name: "Mizuno Singapore Ekiden 2015", image: "", distance: "00:00:00"),
+                                       Achievement(name: "Virtual 5K Race", image: "", distance: "23:07"),]
             
             let virtialRaceSection = AchievementType(name: "Virtual Races", achievements: virutalAchievements)
             self.achievementSections.append(virtialRaceSection)

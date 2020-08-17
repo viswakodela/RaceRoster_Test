@@ -27,12 +27,21 @@ class AchievementsViewController: UIViewController {
         return cv
     }()
     
+    let moreOptionsBarButton: UIBarButtonItem = {
+        let button = UIBarButtonItem(image: UIImage(systemName: "ellipsis.circle.fill"),
+                                     style: .plain,
+                                     target: nil,
+                                     action: nil)
+        return button
+    }()
+    
     typealias DataSource                = UICollectionViewDiffableDataSource<AchievementType, Achievement>
     typealias Snapshot                  = NSDiffableDataSourceSnapshot<AchievementType, Achievement>
     
     // MARK:- Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureNavBar()
         configureView()
         fetchAchievements()
     }
@@ -41,7 +50,6 @@ class AchievementsViewController: UIViewController {
 // MARK:- Helpers
 private extension AchievementsViewController {
     func configureView() {
-        navigationItem.title = "Achievements"
         view.backgroundColor = .systemBackground
         
         view.addSubview(collectionView)
@@ -51,6 +59,11 @@ private extension AchievementsViewController {
             collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             collectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
         ])
+    }
+    
+    func configureNavBar() {
+        navigationItem.title = "Achievements"
+        navigationItem.rightBarButtonItem = moreOptionsBarButton
     }
     
     func createLayout() -> UICollectionViewLayout {

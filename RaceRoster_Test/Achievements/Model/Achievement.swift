@@ -6,19 +6,19 @@
 //  Copyright © 2020 Viswa Kodela. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 class Achievement {
     
     // MARK:- Properties
     let name: String
-    let image: UIImage?
+    let image: String
     let distance: String
     let isAchieved: Bool
     let id = UUID()
     
     // MARK:- init
-    init(name: String, image: UIImage?, distance: String, isAchieved: Bool = true) {
+    init(name: String, image: String, distance: String, isAchieved: Bool = true) {
         self.name = name
         self.image = image
         self.distance = distance

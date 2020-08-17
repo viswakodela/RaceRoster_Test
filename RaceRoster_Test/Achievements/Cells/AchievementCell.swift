@@ -25,7 +25,8 @@ class AchievementCell: UICollectionViewCell {
     let achievementNameLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = UIFont.CustomFonts.semiBold22
+        label.font = UIFont.CustomFonts.semiBold15
+        label.numberOfLines = 2
         label.textAlignment = .center
         return label
     }()
@@ -65,8 +66,8 @@ class AchievementCell: UICollectionViewCell {
         addSubview(overallStackView)
         NSLayoutConstraint.activate([
             overallStackView.topAnchor.constraint(equalTo: topAnchor),
-            overallStackView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            overallStackView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            overallStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 30),
+            overallStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -30),
             overallStackView.bottomAnchor.constraint(equalTo: bottomAnchor),
         ])
     }
@@ -74,6 +75,7 @@ class AchievementCell: UICollectionViewCell {
     func configureCell(with achievement: Achievement?) {
         achievementNameLabel.text = achievement?.name
         achievementDurationLabel.text = achievement?.distance
+        achievementLogoImageView.image = UIImage(named: achievement!.image)
     }
     
 }

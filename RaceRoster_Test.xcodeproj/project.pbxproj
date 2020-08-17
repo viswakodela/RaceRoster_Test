@@ -13,6 +13,7 @@
 		BD809EB924EB0ECF0024A964 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD809EB824EB0ECF0024A964 /* UIViewController+Extension.swift */; };
 		BD809EBC24EB17760024A964 /* AchievementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD809EBB24EB17760024A964 /* AchievementCell.swift */; };
 		BD809EBE24EB1AA60024A964 /* AchievementHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD809EBD24EB1AA60024A964 /* AchievementHeader.swift */; };
+		BD809EC024EB2EDE0024A964 /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD809EBF24EB2EDE0024A964 /* Int+Extension.swift */; };
 		BDF72B5824EB05BB00250360 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF72B5724EB05BB00250360 /* AppDelegate.swift */; };
 		BDF72B5A24EB05BB00250360 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF72B5924EB05BB00250360 /* SceneDelegate.swift */; };
 		BDF72B5C24EB05BB00250360 /* AchievementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF72B5B24EB05BB00250360 /* AchievementsViewController.swift */; };
@@ -32,6 +33,7 @@
 		BD809EB824EB0ECF0024A964 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		BD809EBB24EB17760024A964 /* AchievementCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementCell.swift; sourceTree = "<group>"; };
 		BD809EBD24EB1AA60024A964 /* AchievementHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementHeader.swift; sourceTree = "<group>"; };
+		BD809EBF24EB2EDE0024A964 /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
 		BDF72B5424EB05BB00250360 /* RaceRoster_Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RaceRoster_Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDF72B5724EB05BB00250360 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDF72B5924EB05BB00250360 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 				BD809EB424EB0DDA0024A964 /* UIColor+Extension.swift */,
 				BD809EB624EB0E440024A964 /* UIFont+Extension.swift */,
 				BD809EB824EB0ECF0024A964 /* UIViewController+Extension.swift */,
+				BD809EBF24EB2EDE0024A964 /* Int+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 				BDF72B5C24EB05BB00250360 /* AchievementsViewController.swift in Sources */,
 				BD809EBC24EB17760024A964 /* AchievementCell.swift in Sources */,
 				BD809EB924EB0ECF0024A964 /* UIViewController+Extension.swift in Sources */,
+				BD809EC024EB2EDE0024A964 /* Int+Extension.swift in Sources */,
 				BDF72B5824EB05BB00250360 /* AppDelegate.swift in Sources */,
 				BD809EBE24EB1AA60024A964 /* AchievementHeader.swift in Sources */,
 				BDF72B5A24EB05BB00250360 /* SceneDelegate.swift in Sources */,

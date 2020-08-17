@@ -73,9 +73,20 @@ class AchievementCell: UICollectionViewCell {
     }
     
     func configureCell(with achievement: Achievement?) {
-        achievementNameLabel.text = achievement?.name
-        achievementDurationLabel.text = achievement?.distance
-        achievementLogoImageView.image = UIImage(named: achievement!.image)
+        guard let achievement = achievement else { return }
+        achievementNameLabel.text = achievement.name
+        achievementDurationLabel.text = achievement.distance
+        achievementLogoImageView.image = UIImage(named: achievement.image)
+        
+        if !achievement.isAchieved {
+            achievementLogoImageView.alpha = 0.3
+            achievementDurationLabel.alpha = 0.3
+            achievementNameLabel.alpha = 0.3
+        } else {
+            achievementLogoImageView.alpha = 1
+            achievementDurationLabel.alpha = 1
+            achievementNameLabel.alpha = 1
+        }
     }
     
 }
